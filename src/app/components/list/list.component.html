@@ -1,1 +1,23 @@
-<p>list works!</p>
+<h2>Listado de lápices</h2>
+
+<table>
+    <tr>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Fecha Alta</th>
+        <th>descatalogado</th>
+    </tr>
+    <tr *ngFor="let lapiz of lapices">
+        <td>{{lapiz.codigo}}</td>
+        <td>{{lapiz.nombre}}</td>
+        <td>{{lapiz.precio}}</td>
+        <td>{{lapiz.fechaAlta | date:'dd,MM/yyyy'}}</td>
+        <td>{{lapiz.descatalogado}}</td>
+    </tr>
+
+
+
+
+
+</table>

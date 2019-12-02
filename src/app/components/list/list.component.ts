@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Lapiz } from 'src/app/model/lapiz';
+import { LapizService } from 'src/app/services/lapiz.service';
 
 @Component({
   selector: 'app-list',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  lapices:Lapiz[] = [];
+
+  constructor(private lapizService:LapizService) { }
 
   ngOnInit() {
+    this.lapices = this.lapizService.getAll();
   }
 
 }

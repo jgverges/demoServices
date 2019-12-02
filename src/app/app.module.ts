@@ -8,6 +8,7 @@ import { AltaComponent } from './components/alta/alta.component';
 import { ListComponent } from './components/list/list.component';
 import { EditComponent } from './components/edit/edit.component';
 import { DemoService } from './services/demo.service';
+import { LapizService } from './services/lapiz.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { DemoService } from './services/demo.service';
     BrowserModule,
     AppRoutingModule
   ],
-  providers:  [DemoService],
+  providers:  [DemoService, LapizService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
